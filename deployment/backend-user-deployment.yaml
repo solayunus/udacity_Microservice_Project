@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-user
+spec:
+  selector:
+    matchLabels:
+      run: backend-user
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: backend-user
+    spec:
+      containers:
+      - name: backend-user
+        image: docker.io/solayunus/udagram-api-user:v1
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 1000m
+            memory: "2092Mi"
+          requests:
+            cpu: 500m
+            memory: "1024Mi"
+   
