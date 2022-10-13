@@ -16,7 +16,7 @@ spec:
       - name: backend-user
         image: docker.io/solayunus/udagram-api-user:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           limits:
             cpu: 1000m
