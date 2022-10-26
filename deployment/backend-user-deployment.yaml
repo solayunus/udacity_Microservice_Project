@@ -24,4 +24,12 @@ spec:
           requests:
             cpu: 500m
             memory: "1024Mi"
-   
+        env:
+          - name: POSTGRES_USERNAME
+            value: 'yunusdb'
+          - name: POSTGRES_PASSWORD
+            value: myproject3
+          - name: POSTGRES_DB
+            value: postgres
+          - name: POSTGRES_HOST
+            value: database-1.c1p0qczgcbjl.us-east-1.rds.amazonaws.com

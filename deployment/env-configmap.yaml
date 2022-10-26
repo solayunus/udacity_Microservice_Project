@@ -5,7 +5,7 @@ metadata:
 data:
   POSTGRES_USERNAME: yunusdb
   POSTGRES_PASSWORD: myproject3
-  POSTGRES_HOST: database-1.cyqx9zlzicc0.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.c1p0qczgcbjl.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: myawsproject3-dev
   AWS_REGION: us-east-1
