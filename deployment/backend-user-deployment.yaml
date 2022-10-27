@@ -19,17 +19,15 @@ spec:
         - containerPort: 80
         resources:
           limits:
-            cpu: 1000m
-            memory: "2092Mi"
-          requests:
             cpu: 500m
             memory: "1024Mi"
-        env:
-          - name: POSTGRES_USERNAME
-            value: 'yunusdb'
-          - name: POSTGRES_PASSWORD
-            value: myproject3
-          - name: POSTGRES_DB
-            value: postgres
-          - name: POSTGRES_HOST
-            value: database-1.c1p0qczgcbjl.us-east-1.rds.amazonaws.com
+          requests:
+            cpu: 250m
+            memory: "128Mi"
+        envFrom:
+        - secretRef: 
+            name: env-secret
+        - configMapRef: 
+            name: env-config
+        - secretRef:
+            name: mysecret
