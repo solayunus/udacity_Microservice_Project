@@ -24,13 +24,13 @@ spec:
             memory: "128Mi"
           limits:
             cpu: 500m
-            memory: "1024Mi"
+            memory: "8024Mi"
         envFrom:
         - secretRef: 
             name: env-secret
         - configMapRef: 
             name: env-config
         - secretRef:
-            name: aws-secret
+            name: mysecret
    
             
